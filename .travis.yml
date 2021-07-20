@@ -8,6 +8,7 @@ install:
   # - npm install cypress
   # - npm install --save-dev cypress cypress-cucumber-preprocessor
 
+
 script:
   - docker pull michelleamesquita/cypress-ci-reports
   - docker run michelleamesquita/cypress-ci-reports
