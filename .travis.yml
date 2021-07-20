@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - 11.6.0
+cache: npm
+
+install:
+  - npm install
+
+script:
+  - npm run test
+  - npm run report:merge
+  - npm run report:generate
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local_dir: build
+  on:
+    branch: maste
