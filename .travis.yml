@@ -9,7 +9,7 @@ install:
   - npm install --save-dev cypress cypress-cucumber-preprocessor
 
 script:
-  - npm run test
+  - npm run test:sucess
   - npm run report:merge 
   - npm run report:generate
 
