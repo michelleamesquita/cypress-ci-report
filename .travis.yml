@@ -12,8 +12,9 @@ script:
   - docker pull michelleamesquita/cypress-ci-reports
   - docker run -v $PWD/:/app/report/ michelleamesquita/cypress-ci-reports
   - git init
-  - git add cucumber_report.html
+  - git add .
   - git commit -m "Deploy to GitHub Pages"
+  - git push
 
   #- docker run michelleamesquita/cypress-ci-reports cat /app/report/cucumber_report.html > cucumber_report.html
   #- docker run michelleamesquita/cypress-ci-report cat /app/public/index.html > index.html
