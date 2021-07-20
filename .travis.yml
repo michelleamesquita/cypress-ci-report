@@ -9,9 +9,10 @@ install:
   # - npm install --save-dev cypress cypress-cucumber-preprocessor
 
 script:
-  - docker pull michelleamesquita/cypress-ci-report
-  - docker run michelleamesquita/cypress-ci-report
-  - docker run michelleamesquita/cypress-ci-report cat /app/public/index.html > index.html
+  - docker pull michelleamesquita/cypress-ci-reports
+  - docker run michelleamesquita/cypress-ci-reports
+  - docker run michelleamesquita/cypress-ci-reports cat /app/report/cucumber_report.html > cucumber_report.html
+  #- docker run michelleamesquita/cypress-ci-report cat /app/public/index.html > index.html
   
   # - npm run test:sucess
   # - npm run report:merge 

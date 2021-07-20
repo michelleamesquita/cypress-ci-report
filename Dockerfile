@@ -7,5 +7,6 @@ RUN npm install cypress
 RUN $(npm bin)/cypress verify
 
 CMD npm run test:sucess; \
-npm run report:merge ; \ 
-npm run report:generate
+npm run cucumber:report
+# npm run report:merge ; \ 
+# npm run report:generate
