@@ -6,7 +6,7 @@ COPY . /app
 RUN npm install cypress
 RUN $(npm bin)/cypress verify
 
-CMD npm run test:sucess; \
+CMD npm run test:search; \
 npm run cucumber:report
 # npm run report:merge ; \ 
 # npm run report:generate
