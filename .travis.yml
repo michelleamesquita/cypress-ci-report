@@ -11,7 +11,7 @@ install:
 script:
   - docker pull michelleamesquita/cypress-ci-report
   - docker run michelleamesquita/cypress-ci-report
-  - docker run michelleamesquita/cypress-ci-report cat /app/public/index.html > index.html
+  #- docker run michelleamesquita/cypress-ci-report cat /app/public/index.html > index.html
   
   # - npm run test:sucess
   # - npm run report:merge 
