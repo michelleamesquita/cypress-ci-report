@@ -5,13 +5,17 @@ cache: npm
 
 install:
   - npm install
-  - npm install cypress
-  - npm install --save-dev cypress cypress-cucumber-preprocessor
+  # - npm install cypress
+  # - npm install --save-dev cypress cypress-cucumber-preprocessor
 
 script:
-  - npm run test:sucess
-  - npm run report:merge 
-  - npm run report:generate
+  - docker pull michelleamesquita/cypress-ci-report
+  - docker run michelleamesquita/cypress-ci-report
+  - docker run michelleamesquita/cypress-ci-report cat /app/public/index.html > index.html
+  
+  # - npm run test:sucess
+  # - npm run report:merge 
+  # - npm run report:generate
 
 deploy:
   provider: pages

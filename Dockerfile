@@ -1,6 +1,11 @@
 FROM cypress/base:10
+ 
+WORKDIR /app
+COPY . /app 
+
 RUN npm install cypress
 RUN $(npm bin)/cypress verify
-RUN npm run test
-RUN npm run report:merge 
-RUN npm run report:generate
+
+CMD npm run test:sucess; \
+npm run report:merge ; \ 
+npm run report:generate
