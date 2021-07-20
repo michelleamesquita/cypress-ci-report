@@ -5,10 +5,13 @@ cache: npm
 
 install:
   - npm install
+  - npm install cypress
+  - npm install --save-dev cypress cypress-cucumber-preprocessor
 
 script:
-  - docker build -t cypress-test .
-  - docker run cypress-test
+  - npm run test
+  - npm run report:merge 
+  - npm run report:generate
 
 deploy:
   provider: pages
