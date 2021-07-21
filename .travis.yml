@@ -18,7 +18,7 @@ after_success:
   - git config user.email "travis@travis.org"
   - git add .
   - git commit -m "Deploy to GitHub Pages"
-  - git push --force --quiet "https://michelleamesquita:${GH_TOKEN}@${GH_REF}" HEAD:master
+  - git push "https://michelleamesquita:${GH_TOKEN}@${GH_REF}" HEAD:master
 
 
   #- docker run michelleamesquita/cypress-ci-reports cat /app/report/cucumber_report.html > cucumber_report.html
