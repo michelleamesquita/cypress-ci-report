@@ -1,3 +1,3 @@
-# cypress-simple-ci-report :) 
+# cypress-simple-ci-report
 
-It's a simple Cypress project with Travis integration !
+It's a simple Cypress project with Travis integration ! 👻
