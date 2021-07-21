@@ -13,7 +13,7 @@ script:
   - docker run -v $PWD/:/app/report/ michelleamesquita/cypress-ci-reports
 
 after_success:
-  - git remote
+  - git init
   - git config user.name "Travis CI"
   - git config user.email "travis@travis.org"
   - git add cucumber_report.html
@@ -35,6 +35,6 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   local_dir: build
-  target_branch: master
+  target_branch: gh-pages
   on:
     branch: master 
