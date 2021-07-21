@@ -29,12 +29,3 @@ after_success:
   # - npm run test:sucess
   # - npm run report:merge 
   # - npm run report:generate
-
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_API_KEY
-  local_dir: build
- # target_branch: gh-pages
-  on:
-    branch: main 
