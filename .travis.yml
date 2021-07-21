@@ -18,7 +18,7 @@ after_success:
   - git config user.email "travis@travis.org"
   - git add cucumber_report.html
   - git commit -m "Deploy to GitHub Pages"
-  - git push --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" HEAD:master
+  - git push --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" HEAD:main
   #- git push --force --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" master:gh-pages > /dev/null 2>&1
   
   
@@ -37,4 +37,4 @@ deploy:
   local_dir: build
   target_branch: gh-pages
   on:
-    branch: master 
+    branch: main 
