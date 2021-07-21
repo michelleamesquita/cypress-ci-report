@@ -13,7 +13,7 @@ script:
   - docker run -v $PWD/:/app/report/ michelleamesquita/cypress-ci-reports
   - git init
   - git config user.name "Travis CI"
-  - git config user.email "travisci@test.com"
+  - git config user.email "michelleamesquita@gmail.com"
   - git add .
   - git commit -m "Deploy to GitHub Pages"
   - git push -u origin main
