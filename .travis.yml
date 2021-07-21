@@ -3,6 +3,9 @@ node_js:
   - 11.6.0
 cache: npm
 
+before_install:
+  - git pull --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" HEAD:gh-pages
+
 install:
   - npm install
   # - npm install cypress
