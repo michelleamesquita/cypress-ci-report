@@ -14,13 +14,14 @@ install:
 script:
   - docker pull michelleamesquita/cypress-ci-reports
   - docker run -v /etc/hosts:/etc/hosts michelleamesquita/cypress-ci-reports
+  - ls
   #- docker run -v $PWD/:/app/report/ michelleamesquita/cypress-ci-reports
 
 after_success:
   - git init
   - git config user.name "Travis CI"
   - git config user.email "travis@travis.org"
-  - git add report/cucumber_report.html
+  - git add /report/cucumber_report.html
   #- git add cucumber_report.html
   - git commit -m "Deploy to GitHub Pages"
   - git push --force --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" HEAD:gh-pages
