@@ -15,8 +15,8 @@ script:
   - docker pull michelleamesquita/cypress-ci-reports
   #- docker run -v /etc/hosts:/etc/hosts michelleamesquita/cypress-ci-reports
   #- ls
-  - docker run -v $PWD/:/app/report/ michelleamesquita/cypress-ci-reports
-
+  - docker run -v $PWD/:/app/report/ michelleamesquita/cypress-ci-reports2
+  #- docker run -v $PWD/:/app/report/ michelleamesquita/cypress-ci-reports
 after_success:
   - git init
   - git config user.name "Travis CI"
