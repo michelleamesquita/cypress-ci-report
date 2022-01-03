@@ -37,3 +37,4 @@ echo "TEST_RESULTS: Tests: $TEST | ✔: $(( 100 * PASSES / TEST  ))"%" | ✖: $(
 
 
 export RESULT=$(( 100 * PASSES / TEST  ))
+echo $RESULT
