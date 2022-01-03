@@ -19,6 +19,8 @@ script:
   #- docker run -v $PWD/:/app/report/ michelleamesquita/cypress-ci-reports2
   
 after_success:
+
+  - ./final_report.sh
   - git init
   - git config user.name "Travis CI"
   - git config user.email "travis@travis.org"
