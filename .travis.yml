@@ -26,6 +26,7 @@ after_success:
   - git commit -m "Deploy to GitHub Pages"
   - git push --force --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" HEAD:gh-pages
   - set -e
+  - echo $?
   # - git push --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" HEAD:main
   #- git push --force --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" main:gh-pages > /dev/null 2>&1
   
