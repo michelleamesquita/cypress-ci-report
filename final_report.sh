@@ -34,3 +34,6 @@ PASSES=$((TEST - (FAILURES+SKIP+PENDING)))
 
 
 echo "TEST_RESULTS: Tests: $TEST | ✔: $(( 100 * PASSES / TEST  ))"%" | ✖: $(( 100 * FAILURES / TEST ))"%" | Skipped: $(( 100 * TOTAL_SKIPPED / TEST ))"%""
+
+
+export RESULT=$(( 100 * PASSES / TEST  ))
