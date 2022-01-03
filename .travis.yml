@@ -21,7 +21,7 @@ script:
 after_success:
 
   - chmod +x final_report.sh
-  - ./final_report.sh
+  - . final_report.sh
   - git init
   - git config user.name "Travis CI"
   - git config user.email "travis@travis.org"
