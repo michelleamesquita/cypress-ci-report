@@ -17,7 +17,6 @@ script:
   #- ls
   - docker run -v $PWD/:/app/report/ michelleamesquita/cypress-ci-reports
   #- docker run -v $PWD/:/app/report/ michelleamesquita/cypress-ci-reports2
-  - travis_terminate 0
   
 after_success:
   - git init
@@ -27,8 +26,7 @@ after_success:
   - git add cucumber_report.html
   - git commit -m "Deploy to GitHub Pages"
   - git push --force --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" HEAD:gh-pages
-  - set "-e"
-  - echo $?
+#   - travis_terminate 1
 
   # - git push --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" HEAD:main
   #- git push --force --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" main:gh-pages > /dev/null 2>&1
