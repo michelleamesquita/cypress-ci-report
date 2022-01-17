@@ -2,6 +2,7 @@ import {Given,Then} from 'cypress-cucumber-preprocessor/steps'
 // import GoogleSearchPage from './searchPage'
 
 const url = 'https://google.com'
+
 Given('I open Google page', () => {
   cy.visit(url)
 })
