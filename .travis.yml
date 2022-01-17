@@ -24,7 +24,7 @@ after_success:
   - chmod +x final_report.sh
   - . final_report.sh
   - chmod +x telegram.sh
-  - bash ./telegram.sh
+  - . telegram.sh
   
   - git init
   - git config user.name "Travis CI"
