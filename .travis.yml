@@ -22,6 +22,8 @@ after_success:
 
   - chmod +x final_report.sh
   - . final_report.sh
+    - chmod +x telegram_notification.sh
+  - . telegram_notification.sh
   - git init
   - git config user.name "Travis CI"
   - git config user.email "travis@travis.org"
@@ -31,9 +33,8 @@ after_success:
   - git push --force --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" HEAD:gh-pages
   - echo $RESULT
 #   - if [ $RESULT -le 100 ]; then travis_terminate 1; fi
-  - ls
-  - chmod +x telegram_notification.sh
-  - . telegram_notification.sh
+
+
   
 # after_script:
 #   - bash ./telegram_notification.sh
