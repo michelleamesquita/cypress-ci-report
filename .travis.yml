@@ -20,9 +20,10 @@ script:
   
 after_success:
 
+  - ls  
   - chmod +x final_report.sh
   - . final_report.sh
-    - chmod +x telegram_notification.sh
+  - chmod +x telegram_notification.sh
   - . telegram_notification.sh
   - git init
   - git config user.name "Travis CI"
