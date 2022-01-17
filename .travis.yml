@@ -31,9 +31,10 @@ after_success:
   - git push --force --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" HEAD:gh-pages
   - echo $RESULT
   - if [ $RESULT -le 100 ]; then travis_terminate 1; fi
-  
-after_script:
   - bash ./telegram_notification.sh
+  
+# after_script:
+#   - bash ./telegram_notification.sh
   # - git push --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" HEAD:main
   #- git push --force --quiet "https://michelleamesquita:${GITHUB_API_KEY}@${GH_REF}" main:gh-pages > /dev/null 2>&1
   
