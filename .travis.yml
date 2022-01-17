@@ -23,7 +23,7 @@ after_success:
   - ls  
   - chmod +x final_report.sh
   - . final_report.sh
-  - chmod 777 telegram.sh
+  - chmod +x telegram.sh
   - bash ./telegram.sh
   
   - git init
