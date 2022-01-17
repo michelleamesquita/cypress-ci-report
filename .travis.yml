@@ -23,8 +23,8 @@ after_success:
   - ls  
   - chmod +x final_report.sh
   - . final_report.sh
-  - chmod 777 telegram_notification.sh
-  - bash ./telegram_notification.sh
+  - chmod 777 telegram.sh
+  - bash ./telegram.sh
   
   - git init
   - git config user.name "Travis CI"
